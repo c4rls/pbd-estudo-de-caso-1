@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# Copy the database backups folder from project directory to pgAdmin.
+#
+# The pgAdmin container must be running.
+# The admin_admin.com directory must exist (it is created after pgAdmin connects to the server).
+
+main()
+{
+  local adm_dir="/var/lib/pgadmin/storage/admin_admin.com"
+
+  docker cp db_backups pbd-estudo-de-caso-1-pgadmin-1:$adm_dir
+
+  docker exec -u root pbd-estudo-de-caso-1-pgadmin-1 /bin/sh -c "chown -R pgadmin:root $adm_dir/db_backups"
+}
+
+main

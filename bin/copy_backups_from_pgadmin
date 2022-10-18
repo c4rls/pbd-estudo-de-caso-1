@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+# Copy the database backups folder from pgAdmin to project directory.
+
+# The pgAdmin container must be running.
+# The admin_admin.com directory must exist (it is created after pgAdmin connects to the server).
+
+docker cp pbd-estudo-de-caso-1-pgadmin-1:/var/lib/pgadmin/storage/admin_admin.com/db_backups .
