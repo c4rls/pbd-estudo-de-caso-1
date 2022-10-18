@@ -2,5 +2,5 @@
  
 ## Todo
 
-- [ ] Permitir que o PGAdmin possa conectar no servidor usando o nome do container
+- [x] Permitir que o PGAdmin possa conectar no servidor usando o nome do container
 - [ ] Resolver problema de permissão do usuário nos diretórios criados para os backups 
